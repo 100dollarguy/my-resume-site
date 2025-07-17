@@ -1,90 +1,96 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
-  background-color: #f4f6f9;
   color: #333;
 }
 
 .container {
-  max-width: 800px;
-  margin: 30px auto;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 30px;
 }
 
-.header-text h1 {
-  margin: 0;
-  font-size: 2rem;
+.profile-pic {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .profile-pic img {
   width: 120px;
-  height: 120px;
+  height: auto;
   border-radius: 50%;
-  object-fit: cover;
   border: 2px solid #ccc;
 }
 
-.contact-buttons,
-.cert-buttons {
-  margin-top: 10px;
+.header-text {
+  padding-top: 10px;
+  padding-right: 140px; /* Space for image */
+}
+
+.header-text h1 {
+  margin-bottom: 10px;
+}
+
+.top-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-a.btn {
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 0.95rem;
+.btn {
   display: inline-block;
-  transition: background-color 0.3s ease;
+  padding: 8px 14px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  color: white;
+  transition: 0.3s;
 }
 
+.btn.contact,
 .btn.linkedin {
-  background-color: #0077b5;
-  color: white;
+  background-color: #5bc0de; /* light blue */
 }
 
-.btn.contact {
-  background-color: #4caf50;
-  color: white;
+.btn.contact:hover,
+.btn.linkedin:hover {
+  background-color: #31b0d5;
 }
 
-.btn.cert {
-  background-color: #555;
-  color: white;
+.btn.orange {
+  background-color: #ff9800; /* orange */
 }
 
-.btn:hover {
-  opacity: 0.9;
+.btn.orange:hover {
+  background-color: #e68900;
 }
 
-section {
+.cert-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+h2 {
   margin-top: 30px;
-}
-
-section h2 {
-  color: #222;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
 }
 
 ul {
   padding-left: 20px;
 }
 
-ul li {
-  margin-bottom: 8px;
+section {
+  margin-bottom: 25px;
 }
