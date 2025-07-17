@@ -1,205 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume - Rohan D R</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #333;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .header-text h1 {
-      margin: 0 0 10px;
-      font-size: 2em;
-    }
+.header-text h1 {
+  margin: 0;
+  font-size: 2rem;
+}
 
-    .profile-pic img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
 
-    .contact-buttons {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
+.contact-buttons,
+.cert-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .btn {
-      padding: 8px 14px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
+a.btn {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
 
-    .linkedin {
-      background-color: #0a66c2;
-      color: white;
-    }
+.btn.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
 
-    .contact {
-      background-color: #6c63ff;
-      color: white;
-    }
+.btn.contact {
+  background-color: #4caf50;
+  color: white;
+}
 
-    .cert {
-      background-color: #ff914d;
-      color: white;
-    }
+.btn.cert {
+  background-color: #555;
+  color: white;
+}
 
-    .btn:hover {
-      opacity: 0.9;
-    }
+.btn:hover {
+  opacity: 0.9;
+}
 
-    h2 {
-      margin-top: 30px;
-      color: #444;
-    }
+section {
+  margin-top: 30px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+section h2 {
+  color: #222;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
 
-    .cert-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="header-text">
-        <h1>ROHAN D R</h1>
-        <div class="contact-buttons">
-          <a href="https://www.linkedin.com/in/rohan-d-r-50bb391b8/" target="_blank" class="btn linkedin">💼 LinkedIn</a>
-          <a href="mailto:official.rohandr@proton.me" class="btn contact">📧 Email Me</a>
-          <a href="tel:+9184312686727" class="btn contact">📞 Call Me</a>
-        </div>
-      </div>
-      <div class="profile-pic">
-        <img src="Profile.jpg" alt="Profile" />
-      </div>
-    </header>
+ul {
+  padding-left: 20px;
+}
 
-    <section>
-      <h2>Career Objective</h2>
-      <p>
-        To work for a professional organization which offers good learning opportunities, an excellent cooperative working environment to utilize my conceptual knowledge, enabling me to improve my abilities, develop my functionality, and improve the organization plans and work procedures.
-      </p>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Computer Proficiency</li>
-        <li>Multitasking</li>
-        <li>Time Management</li>
-        <li>Communication</li>
-        <li>Adaptability</li>
-        <li>Strategic Planning</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education Qualification</h2>
-      <ul>
-        <li>
-          <strong>Bachelor of Computer Applications</strong><br />
-          SJES College of Management Studies, Bengaluru North University<br />
-          Oct 2021 - Oct 2024 | CGPA: 8.9/10
-        </li>
-        <li>
-          <strong>Class 12</strong><br />
-          STJ PU College, Department of PU Education, Karnataka<br />
-          June 2014 - March 2016 | 62.5%
-        </li>
-        <li>
-          <strong>Class 10</strong><br />
-          KCA High School Harapanahalli, Karnataka Board<br />
-          June 2013 - April 2014 | 78.4%
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Languages</h2>
-      <ul>
-        <li>English</li>
-        <li>Kannada</li>
-        <li>Hindi</li>
-        <li>Telugu</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Courses</h2>
-      <ul>
-        <li>Database Management System</li>
-        <li>Computer Networks and Communications</li>
-        <li>Python</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <div class="cert-buttons">
-        <a href="https://www.mindluster.com/student/certificate/12277716654" target="_blank" class="btn cert">📄 HTML Certificate</a>
-        <a href="https://www.mindluster.com/student/certificate/12277714014" target="_blank" class="btn cert">📄 Git & GitHub</a>
-        <a href="https://www.mindluster.com/student/certificate/12277713891" target="_blank" class="btn cert">📄 Docker</a>
-        <a href="https://www.mindluster.com/student/certificate/12277714014" target="_blank" class="btn cert">📄 Blockchain Solidity</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>Hobbies</h2>
-      <ul>
-        <li>Reading Tech Blogs</li>
-        <li>Sports</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Internship</h2>
-      <p>Python Development Intern at Sai Ket Systems</p>
-      <a href="https://drive.google.com/file/d/1BYobfQ8Xx33i90HqxuBTNoHUceh3K1KB/view?usp=share_link" class="btn cert" target="_blank">
-        📄 View Internship Certificate
-      </a>
-    </section>
-
-    <section>
-      <h2>Declaration</h2>
-      <p>
-        I hereby declare that all the details mentioned above are correct to the best of my knowledge and confidence. I bear responsibility for any error or mistake in the future.
-      </p>
-    </section>
-  </div>
-</body>
-</html>
+ul li {
+  margin-bottom: 8px;
+}
