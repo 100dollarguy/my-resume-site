@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f4f4;
@@ -13,6 +14,7 @@ body {
   background-color: #fff;
 }
 
+/* Header */
 header.header-flex {
   display: flex;
   align-items: center;
@@ -47,7 +49,7 @@ header.header-flex {
   text-decoration: none;
   border-radius: 6px;
   color: #fff;
-  background-color: #007b7f;
+  background-color: #007b7f; /* subtle blue */
   transition: 0.3s;
 }
 
@@ -55,6 +57,7 @@ header.header-flex {
   background-color: #005f66;
 }
 
+/* Cards */
 .card {
   padding: 20px;
   margin-bottom: 25px;
@@ -69,6 +72,7 @@ h2 {
   padding-bottom: 5px;
 }
 
+/* Skills */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -83,12 +87,14 @@ h2 {
   font-size: 14px;
 }
 
+/* Education */
 .edu-grid {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+/* Certifications */
 .cert-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -96,6 +102,7 @@ h2 {
   margin-top: 10px;
 }
 
+/* Projects */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,6 +129,7 @@ h2 {
   font-size: 1.1rem;
 }
 
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -153,17 +161,59 @@ h2 {
   color: #fff;
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .container { margin: 10px; padding: 15px; }
-  header.header-flex { flex-direction: column; align-items: center; text-align: center; }
-  .profile-pic img { width: 100px; margin-bottom: 10px; margin-right: 0; }
-  .top-buttons { justify-content: center; gap: 8px; margin-top: 15px; }
-  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-  .edu-grid { flex-direction: column; }
-  .projects-grid { grid-template-columns: 1fr; }
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
 
-  .nav-toggle { display: none; }
-  .nav-toggle-label { display: block; position: absolute; top: 15px; right: 20px; height: 25px; width: 35px; cursor: pointer; z-index: 1100; }
+  header.header-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic img {
+    width: 100px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .top-buttons {
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .edu-grid {
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mobile Hamburger Menu */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
   .nav-toggle-label span,
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
@@ -175,20 +225,67 @@ h2 {
     position: relative;
     transition: all 0.3s ease;
   }
+
   .nav-toggle-label span::before,
-  .nav-toggle-label span::after { content: ''; position: absolute; }
-  .nav-toggle-label span::before { top: -10px; }
-  .nav-toggle-label span::after { top: 10px; }
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
 
-  .navbar ul { display: none; flex-direction: column; position: fixed; top: 50px; right: 0; width: 75%; max-width: 300px; height: 100vh; background-color: #fff; padding: 40px 20px 20px 20px; box-shadow: -2px 0 8px rgba(0,0,0,0.15); overflow-y: auto; z-index: 1099; gap: 15px; }
-  .navbar ul li a { font-size: 18px; padding: 10px 15px; }
+  .nav-toggle-label span::before {
+    top: -10px;
+  }
 
-  .nav-toggle:checked + .nav-toggle-label + ul { display: flex; }
-  .nav-toggle:checked + .nav-toggle-label span { background-color: transparent; }
-  .nav-toggle:checked + .nav-toggle-label span::before { transform: rotate(45deg); top: 0; }
-  .nav-toggle:checked + .nav-toggle-label span::after { transform: rotate(-45deg); top: 0; }
+  .nav-toggle-label span::after {
+    top: 10px;
+  }
 
-  section { scroll-margin-top: 60px; }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 40px 20px 20px 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    z-index: 1099;
+    gap: 15px;
+  }
+
+  .navbar ul li a {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + ul {
+    display: flex;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span {
+    background-color: transparent;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  section {
+    scroll-margin-top: 60px;
+  }
 }
 
-html { scroll-behavior: smooth; }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
