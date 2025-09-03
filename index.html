@@ -1,119 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume - Rohan D R</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan D R - Resume</title>
+
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Rohan D R - BCA Graduate & MCA Student | DevOps, Python, Web3, Blockchain | Projects, Certifications, Resume">
+  <meta name="keywords" content="Rohan D R, Resume, DevOps, Python, Blockchain, GitHub, Docker, Tailscale, Pi-hole, Nextcloud, MCA, BCA">
+  <meta property="og:title" content="Rohan D R - Resume">
+  <meta property="og:description" content="Professional resume website of Rohan D R showcasing skills, projects, certifications, and contact information.">
+  <meta property="og:type" content="website">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
-    <header>
+
+    <!-- Header -->
+    <header class="header-flex">
       <div class="profile-pic">
-        <img src="Profile.jpg" alt="Profile Picture" />
+        <img src="Profile.jpg" alt="Profile Picture">
       </div>
       <div class="header-text">
         <h1>ROHAN D R</h1>
+        <p>Bengaluru, India</p>
         <div class="top-buttons">
-          <a href="mailto:official.rohandr@proton.me" class="btn contact">📧 Email Me</a>
-          <a href="tel:+918431686727" class="btn contact">📞 Call Me</a>
-          <a href="https://wa.me/918431686727" target="_blank" class="btn contact">💬 WhatsApp</a>
-          <a href="https://www.linkedin.com/in/rohan-d-r-50bb391b8/" target="_blank" class="btn linkedin">💼 LinkedIn</a>
+          <a href="mailto:official.rohandr@proton.me" class="btn">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="tel:+918431686727" class="btn">
+            <i class="fas fa-phone"></i> Call
+          </a>
+          <a href="https://wa.me/918431686727" target="_blank" class="btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/rohan-d-r-50bb391b8/" target="_blank" class="btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/100dollarguy" target="_blank" class="btn">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
       </div>
     </header>
 
-    <section>
+    <!-- Career Objective -->
+    <section id="career" class="card">
       <h2>Career Objective</h2>
       <p>
-        To work for a professional organization which offers good learning opportunities, an excellent cooperative working environment to utilize my conceptual knowledge, enabling me to improve my abilities, develop my functionality, and improve the organization plans and work procedures.
+        Motivated BCA graduate and final-year MCA student seeking an entry-level position in a reputed organization,
+        where academic knowledge and practical experience can be utilized and further developed.
+        Eager to contribute to organizational growth and build a strong professional foundation.
       </p>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Computer Proficiency</li>
-        <li>Multitasking</li>
-        <li>Time Management</li>
-        <li>Communication</li>
-        <li>Adaptability</li>
-        <li>Strategic Planning</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education Qualification</h2>
-      <ul>
-        <li>
-          <strong>Bachelor of Computer Applications</strong><br />
-          SJES College of Management Studies, Bengaluru North University<br />
-          Oct 2021 - Oct 2024 | CGPA: 8.9/10
-        </li>
-        <li>
-          <strong>Class 12</strong><br />
-          STJ PU College, Karnataka<br />
-          June 2014 - March 2016 | 62.5%
-        </li>
-        <li>
-          <strong>Class 10</strong><br />
-          KCA High School Harapanahalli, Karnataka Board<br />
-          June 2013 - April 2014 | 78.4%
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Languages</h2>
-      <ul>
-        <li>English</li>
-        <li>Kannada</li>
-        <li>Hindi</li>
-        <li>Telugu</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Courses</h2>
-      <ul>
-        <li>Database Management System</li>
-        <li>Computer Networks and Communications</li>
-        <li>Python</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <div class="cert-buttons">
-        <a href="https://www.mindluster.com/student/certificate/12277716654" target="_blank" class="btn orange">📄 HTML Certificate</a>
-        <a href="https://www.mindluster.com/student/certificate/12277715952" target="_blank" class="btn orange">📄 Git & GitHub</a>
-        <a href="https://www.mindluster.com/student/certificate/12277713891" target="_blank" class="btn orange">📄 Docker</a>
-        <a href="https://www.mindluster.com/student/certificate/12277714014" target="_blank" class="btn orange">📄 Blockchain Solidity</a>
+    <!-- Skills -->
+    <section id="skills" class="card">
+      <h2>Skills Summary</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fab fa-python"></i> Python</div>
+        <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+        <div class="skill"><i class="fas fa-network-wired"></i> Networking</div>
+        <div class="skill"><i class="fas fa-server"></i> Linux / Virtualization</div>
+        <div class="skill"><i class="fab fa-github"></i> Git & GitHub Actions</div>
+        <div class="skill"><i class="fas fa-cogs"></i> DevOps / CI-CD</div>
+        <div class="skill"><i class="fas fa-lock"></i> Security / VPN</div>
+        <div class="skill"><i class="fas fa-database"></i> SQL</div>
+        <div class="skill"><i class="fas fa-code"></i> Solidity (Basic)</div>
       </div>
     </section>
 
-    <section>
-      <h2>Hobbies</h2>
-      <ul>
-        <li>Reading Tech Blogs</li>
-        <li>Sports</li>
-      </ul>
+    <!-- Education -->
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <div class="edu-grid">
+        <div class="edu-item">
+          <strong>Master of Computer Applications (MCA) – Final Year</strong><br>
+          Amity Online University<br>
+          Expected Graduation: August 2026
+        </div>
+        <div class="edu-item">
+          <strong>Bachelor of Computer Applications (BCA)</strong><br>
+          SJES College of Management Studies, Bengaluru North University<br>
+          Oct 2018 – Oct 2021 | CGPA: 8.9/10
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Internship</h2>
-      <p>Python Development Intern at Sai Ket Systems</p>
-      <a href="https://drive.google.com/file/d/1BYobfQ8Xx33i90HqxuBTNoHUceh3K1KB/view?usp=share_link" class="btn orange" target="_blank">
-        📄 View Internship Certificate
-      </a>
+    <!-- Certifications -->
+    <section id="certifications" class="card">
+      <h2>Certifications</h2>
+      <div class="cert-buttons">
+        <a href="https://www.mindluster.com/student/certificate/12277714014" target="_blank" class="btn">
+          📄 Blockchain Solidity
+        </a>
+        <a href="https://www.mindluster.com/student/certificate/12277713891" target="_blank" class="btn">
+          📄 Docker
+        </a>
+        <a href="https://www.mindluster.com/student/certificate/12277715952" target="_blank" class="btn">
+          📄 Git & GitHub
+        </a>
+        <a href="https://www.mindluster.com/student/certificate/12277716654" target="_blank" class="btn">
+          📄 HTML
+        </a>
+      </div>
     </section>
 
-    <section>
-      <h2>Declaration</h2>
+    <!-- Projects -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project featured">
+          <strong>Self-Hosted Media Server (Jellyfin + Tailscale):</strong>
+          <p>Private media streaming server accessible remotely via encrypted VPN.</p>
+          <a href="https://github.com/100dollarguy/private-media-server-macos" target="_blank" class="btn">🔗 View Code</a>
+        </div>
+        <div class="project featured">
+          <strong>Private DNS Ad-Blocking & Remote Access:</strong>
+          <p>Pi-hole + Unbound DNS in Docker with secure Tailscale VPN.</p>
+          <a href="https://github.com/100dollarguy/pihole-unbound-tailscale-dockerized" target="_blank" class="btn">🔗 View Code</a>
+        </div>
+        <div class="project featured">
+          <strong>Nextcloud Cloud Storage & Monitoring:</strong>
+          <p>Nextcloud with MariaDB + Redis, secured via Caddy, monitored with Prometheus & Grafana.</p>
+          <a href="https://github.com/100dollarguy/tailscale-nextcloud-docker" target="_blank" class="btn">🔗 View Code</a>
+        </div>
+        <div class="project featured">
+          <strong>Home Network Design with CGNAT Avoidance:</strong>
+          <p>Multi-subnet Wi-Fi network overcoming ISP CGNAT limits using TP-Link devices.</p>
+          <a href="https://github.com/100dollarguy/home-network-design-with-cgnat-avoidance" target="_blank" class="btn">🔗 View Code</a>
+        </div>
+        <div class="project featured">
+          <strong>Network Segmentation Lab:</strong>
+          <p>Enterprise network zones with Linux namespaces, bridges & iptables firewall policies.</p>
+          <a href="https://github.com/100dollarguy/vps-network-segmentation-demo" target="_blank" class="btn">🔗 View Code</a>
+        </div>
+        <div class="project featured">
+          <strong>Early Blockchain Project:</strong>
+          <p>Solidity smart contracts for basic social media & time-locked contracts using Hardhat.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Resume -->
+    <section id="resume" class="card">
+      <h2>Download Resume</h2>
+      <p>You can download my resume in PDF format:</p>
+      <a href="Rohan_DR_Resume.pdf" target="_blank" class="btn" download>📄 Download PDF</a>
+    </section>
+
+    <!-- Contact / Declaration -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <p>You can reach me through the following channels:</p>
+      <div class="top-buttons">
+        <a href="mailto:official.rohandr@proton.me" class="btn"><i class="fas fa-envelope"></i> Email</a>
+        <a href="tel:+918431686727" class="btn"><i class="fas fa-phone"></i> Call</a>
+        <a href="https://wa.me/918431686727" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.linkedin.com/in/rohan-d-r-50bb391b8/" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/100dollarguy" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+
+      <h3 style="margin-top:20px;">Declaration</h3>
       <p>
-        I hereby declare that all the details mentioned above are correct to the best of my knowledge and confidence. I bear responsibility for any error or mistake in the future.
+        I hereby declare that all the details mentioned above are correct to the best of my knowledge and confidence.
+        I bear responsibility for any error or mistake in the future.
       </p>
     </section>
+
   </div>
 </body>
 </html>
