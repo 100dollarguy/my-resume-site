@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rohan D R - Portfolio</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+
   <!-- Font Awesome for icons -->
   <link
     rel="stylesheet"
@@ -13,16 +16,18 @@
     referrerpolicy="no-referrer"
   />
 
-  <!-- Link to external CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Sticky Navbar with Hamburger Toggle -->
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle" style="position:fixed; top:10px; right:10px; padding:8px 12px; border:none; border-radius:6px; cursor:pointer; z-index:10000;">
+    🌙
+  </button>
+
+  <!-- Sticky Navbar -->
   <nav class="navbar">
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-    </label>
     <ul>
       <li><a href="#career">Career</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -31,6 +36,7 @@
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -44,27 +50,9 @@
         <h1>ROHAN D R</h1>
         <p>Bengaluru, India</p>
         <div class="top-buttons">
-          <a href="mailto:official.rohandr@proton.me" class="btn"
-            ><i class="fas fa-envelope"></i> Email</a
-          >
-          <a href="tel:+918431686727" class="btn"
-            ><i class="fas fa-phone"></i> Call</a
-          >
-          <a
-            href="https://wa.me/918431686727"
-            target="_blank"
-            class="btn"
-            ><i class="fab fa-whatsapp"></i> WhatsApp</a
-          >
-          <a
-            href="https://www.linkedin.com/in/rohan-d-r-50bb391b8/"
-            target="_blank"
-            class="btn"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-          <a href="https://github.com/100dollarguy" target="_blank" class="btn"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
+          <a href="mailto:official.rohandr@proton.me" class="btn"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://www.linkedin.com/in/rohan-d-r-50bb391b8/" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/100dollarguy" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
         </div>
       </div>
     </header>
@@ -113,45 +101,18 @@
     <!-- Internship -->
     <section id="internship" class="card">
       <h2>Internship</h2>
-      <p>
-        Hands-on internship focusing on practical applications of computer science concepts, including networking, DevOps, and cloud deployments.
-      </p>
-      <a
-        href="https://drive.google.com/file/d/1BYobfQ8Xx33i90HqxuBTNoHUceh3K1KB/view?usp=share_link"
-        target="_blank"
-        class="btn"
-        >📄 View Internship Certificate</a
-      >
+      <p>Hands-on internship on Python programming and scripting projects.</p>
+      <a href="https://drive.google.com/file/d/1BYobfQ8Xx33i90HqxuBTNoHUceh3K1KB/view?usp=share_link" target="_blank" class="btn">📄 View Internship Certificate</a>
     </section>
 
     <!-- Certifications -->
     <section id="certifications" class="card">
       <h2>Certifications</h2>
       <div class="cert-buttons">
-        <a
-          href="https://www.mindluster.com/student/certificate/12277714014"
-          target="_blank"
-          class="btn"
-          >📄 Blockchain Solidity</a
-        >
-        <a
-          href="https://www.mindluster.com/student/certificate/12277713891"
-          target="_blank"
-          class="btn"
-          >📄 Docker</a
-        >
-        <a
-          href="https://www.mindluster.com/student/certificate/12277715952"
-          target="_blank"
-          class="btn"
-          >📄 Git & GitHub</a
-        >
-        <a
-          href="https://www.mindluster.com/student/certificate/12277716654"
-          target="_blank"
-          class="btn"
-          >📄 HTML</a
-        >
+        <a href="https://www.mindluster.com/student/certificate/12277714014" target="_blank" class="btn">📄 Blockchain Solidity</a>
+        <a href="https://www.mindluster.com/student/certificate/12277713891" target="_blank" class="btn">📄 Docker</a>
+        <a href="https://www.mindluster.com/student/certificate/12277715952" target="_blank" class="btn">📄 Git & GitHub</a>
+        <a href="https://www.mindluster.com/student/certificate/12277716654" target="_blank" class="btn">📄 HTML</a>
       </div>
     </section>
 
@@ -162,52 +123,27 @@
         <div class="project featured">
           <strong>Self-Hosted Media Server (Jellyfin + Tailscale):</strong>
           <p>Production-ready private media streaming server accessible remotely via encrypted VPN.</p>
-          <a
-            href="https://github.com/100dollarguy/private-media-server-macos"
-            target="_blank"
-            class="btn"
-            >🔗 View Code</a
-          >
+          <a href="https://github.com/100dollarguy/private-media-server-macos" target="_blank" class="btn">🔗 View Code</a>
         </div>
         <div class="project featured">
           <strong>Private DNS Ad-Blocking & Remote Access:</strong>
           <p>Dockerized Pi-hole + Unbound DNS server with secure Tailscale VPN for network-wide ad-blocking and secure remote access.</p>
-          <a
-            href="https://github.com/100dollarguy/pihole-unbound-tailscale-dockerized"
-            target="_blank"
-            class="btn"
-            >🔗 View Code</a
-          >
+          <a href="https://github.com/100dollarguy/pihole-unbound-tailscale-dockerized" target="_blank" class="btn">🔗 View Code</a>
         </div>
         <div class="project featured">
           <strong>Nextcloud Cloud Storage & Monitoring:</strong>
           <p>Nextcloud deployment with MariaDB + Redis, secured via Caddy, monitored using Prometheus & Grafana for full-stack cloud solution.</p>
-          <a
-            href="https://github.com/100dollarguy/tailscale-nextcloud-docker"
-            target="_blank"
-            class="btn"
-            >🔗 View Code</a
-          >
+          <a href="https://github.com/100dollarguy/tailscale-nextcloud-docker" target="_blank" class="btn">🔗 View Code</a>
         </div>
         <div class="project featured">
           <strong>Home Network Design with CGNAT Avoidance:</strong>
           <p>Multi-subnet Wi-Fi network overcoming ISP CGNAT limits using TP-Link devices; demonstrates advanced networking and remote accessibility.</p>
-          <a
-            href="https://github.com/100dollarguy/home-network-design-with-cgnat-avoidance"
-            target="_blank"
-            class="btn"
-            >🔗 View Code</a
-          >
+          <a href="https://github.com/100dollarguy/home-network-design-with-cgnat-avoidance" target="_blank" class="btn">🔗 View Code</a>
         </div>
         <div class="project featured">
           <strong>Network Segmentation Lab:</strong>
           <p>Enterprise network zones using Linux namespaces, bridges & iptables firewall policies for network security and segmentation learning.</p>
-          <a
-            href="https://github.com/100dollarguy/vps-network-segmentation-demo"
-            target="_blank"
-            class="btn"
-            >🔗 View Code</a
-          >
+          <a href="https://github.com/100dollarguy/vps-network-segmentation-demo" target="_blank" class="btn">🔗 View Code</a>
         </div>
         <div class="project featured">
           <strong>Early Blockchain Project:</strong>
@@ -216,20 +152,69 @@
       </div>
     </section>
 
-    <!-- Download Resume -->
+    <!-- Resume -->
     <section id="resume" class="card">
       <h2>Download Resume</h2>
       <a href="Rohan_DR_Resume.pdf" target="_blank" class="btn" download>📄 Download PDF</a>
     </section>
 
-    <!-- Declaration Only -->
-    <section id="declaration" class="card">
-      <h2>Declaration</h2>
-      <p>
-        I hereby declare that all the details mentioned above are correct to the best of my
-        knowledge and confidence. I bear responsibility for any error or mistake in the future.
-      </p>
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <form class="contact-form" action="https://formspree.io/f/xblaqrea" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+        <span class="success-message" id="successMessage">Thank you! Your message has been sent.</span>
+      </form>
     </section>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <span class="pgp">PGP Fingerprint: E94C 62A8 AE1E 1C51 4FAF 18AA E5EB B514 7938 DDB4</span>
+    <span class="copyright">© 2025 Rohan DR. All Rights Reserved.</span>
+  </footer>
+
+  <!-- JS: Dark Mode & Success Message -->
+  <script>
+    const form = document.querySelector('.contact-form');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', (e) => {
+      successMessage.style.display = 'block';
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if(currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.innerHTML = '☀️';
+    } else {
+      toggleBtn.innerHTML = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if(document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.innerHTML = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggleBtn.innerHTML = '🌙';
+      }
+    });
+  </script>
 </body>
 </html>

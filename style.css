@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -12,6 +13,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
+  transition: background-color 0.3s;
 }
 
 /* Header */
@@ -31,6 +33,14 @@ header.header-flex {
 
 .header-text h1 {
   margin: 0;
+  color: #007b7f;
+  transition: color 0.3s;
+}
+
+.header-text p {
+  margin: 5px 0 0 0;
+  color: #555;
+  transition: color 0.3s;
 }
 
 .top-buttons {
@@ -49,8 +59,10 @@ header.header-flex {
   text-decoration: none;
   border-radius: 6px;
   color: #fff;
-  background-color: #007b7f; /* subtle blue */
+  background-color: #007b7f;
   transition: 0.3s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn:hover {
@@ -61,9 +73,10 @@ header.header-flex {
 .card {
   padding: 20px;
   margin-bottom: 25px;
-  background-color: #fcfcfc; /* slightly darker for contrast */
+  background-color: #fcfcfc;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 h2 {
@@ -71,6 +84,8 @@ h2 {
   border-bottom: 2px solid #ddd;
   padding-bottom: 5px;
   font-size: 1.6rem;
+  color: #007b7f;
+  transition: color 0.3s;
 }
 
 /* Skills */
@@ -86,10 +101,12 @@ h2 {
   align-items: center;
   gap: 6px;
   font-size: 14px;
+  color: #333;
+  transition: color 0.3s;
 }
 
 .skill i {
-  color: #007b7f; /* match theme */
+  color: #007b7f;
 }
 
 /* Education */
@@ -120,7 +137,7 @@ h2 {
   padding: 18px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .project:hover {
@@ -132,6 +149,7 @@ h2 {
   display: block;
   margin-bottom: 8px;
   font-size: 1.2rem;
+  color: #007b7f;
 }
 
 /* Navbar */
@@ -141,6 +159,7 @@ h2 {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   z-index: 1000;
+  transition: background-color 0.3s;
 }
 
 .navbar ul {
@@ -164,6 +183,83 @@ h2 {
 .navbar ul li a:hover {
   background-color: #007b7f;
   color: #fff;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007b7f;
+  outline: none;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background-color: #007b7f;
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.contact-form button:hover {
+  background-color: #005f66;
+}
+
+/* Success message */
+.success-message {
+  display: none;
+  color: #007b7f;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer .pgp {
+  font-weight: bold;
+  color: #007b7f;
+}
+
+footer .copyright {
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
 }
 
 /* Mobile Responsive */
@@ -202,95 +298,8 @@ h2 {
   .projects-grid {
     grid-template-columns: 1fr;
   }
-
-  /* Mobile Hamburger Menu */
-  .nav-toggle {
-    display: none;
-  }
-
-  .nav-toggle-label {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    height: 25px;
-    width: 35px;
-    cursor: pointer;
-    z-index: 1100;
-  }
-
-  .nav-toggle-label span,
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    display: block;
-    background-color: #007b7f;
-    height: 3px;
-    width: 100%;
-    border-radius: 3px;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-  }
-
-  .nav-toggle-label span::before {
-    top: -10px;
-  }
-
-  .nav-toggle-label span::after {
-    top: 10px;
-  }
-
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 50px;
-    right: 0;
-    width: 75%;
-    max-width: 300px;
-    height: 100vh;
-    background-color: #fff;
-    padding: 40px 20px 20px 20px;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
-    overflow-y: auto;
-    z-index: 1099;
-    gap: 15px;
-  }
-
-  .navbar ul li a {
-    font-size: 18px;
-    padding: 10px 15px;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label + ul {
-    display: flex;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label span {
-    background-color: transparent;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label span::before {
-    transform: rotate(45deg);
-    top: 0;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label span::after {
-    transform: rotate(-45deg);
-    top: 0;
-  }
-
-  section {
-    scroll-margin-top: 60px;
-  }
 }
 
-/* Small mobile buttons full width */
 @media (max-width: 480px) {
   .btn {
     width: 100%;
@@ -301,4 +310,58 @@ h2 {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode strong {
+  color: #1dd1a1;
+}
+
+body.dark-mode p,
+body.dark-mode .skill,
+body.dark-mode .contact-form label,
+body.dark-mode footer {
+  color: #e0e0e0;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .project {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .navbar ul li a {
+  color: #1dd1a1;
+}
+
+body.dark-mode .navbar ul li a:hover {
+  background-color: #1dd1a1;
+  color: #121212;
+}
+
+body.dark-mode .btn {
+  background-color: #1dd1a1;
+  color: #121212;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #10ac84;
 }
