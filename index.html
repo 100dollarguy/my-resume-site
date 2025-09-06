@@ -28,7 +28,8 @@
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
-    <ul>
+    <span class="hamburger" id="hamburger">&#9776;</span>
+    <ul id="nav-links">
       <li><a href="#career">Career</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
@@ -47,7 +48,6 @@
         <img src="Profile.jpg" alt="Profile Picture" />
       </div>
       <div class="header-text">
-        <h1>ROHAN D R</h1>
         <p>Bengaluru, India</p>
         <div class="top-buttons">
           <a href="mailto:official.rohandr@proton.me" class="btn"><i class="fas fa-envelope"></i> Email</a>
@@ -162,13 +162,16 @@
     <section id="contact" class="card">
       <h2>Contact Me</h2>
       <form class="contact-form" action="https://formspree.io/f/xblaqrea" method="POST">
-        <label for="name">Name</label>
+        <label for="name">Name <span class="required">*</span></label>
         <input type="text" id="name" name="name" required />
 
-        <label for="email">Email</label>
+        <label for="email">Email <span class="required">*</span></label>
         <input type="email" id="email" name="_replyto" required />
 
-        <label for="message">Message</label>
+        <label for="phone">Phone <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+
+        <label for="message">Message <span class="required">*</span></label>
         <textarea id="message" name="message" required></textarea>
 
         <button type="submit">Send Message</button>
@@ -183,11 +186,11 @@
     <span class="copyright">© 2025 Rohan DR. All Rights Reserved.</span>
   </footer>
 
-  <!-- JS: Dark Mode & Success Message -->
+  <!-- JS: Dark Mode, Hamburger & Success Message -->
   <script>
+    // Contact Form Success
     const form = document.querySelector('.contact-form');
     const successMessage = document.getElementById('successMessage');
-
     form.addEventListener('submit', (e) => {
       successMessage.style.display = 'block';
       setTimeout(() => {
@@ -195,16 +198,15 @@
       }, 5000);
     });
 
+    // Dark Mode
     const toggleBtn = document.getElementById('darkModeToggle');
     const currentTheme = localStorage.getItem('theme');
-
     if(currentTheme === 'dark') {
       document.body.classList.add('dark-mode');
       toggleBtn.innerHTML = '☀️';
     } else {
       toggleBtn.innerHTML = '🌙';
     }
-
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       if(document.body.classList.contains('dark-mode')) {
@@ -213,6 +215,17 @@
       } else {
         localStorage.setItem('theme', 'light');
         toggleBtn.innerHTML = '🌙';
+      }
+    });
+
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      if(navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
       }
     });
   </script>
