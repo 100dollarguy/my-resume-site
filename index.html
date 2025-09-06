@@ -8,7 +8,7 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png" />
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -22,9 +22,7 @@
 <body>
 
   <!-- Dark Mode Toggle -->
-  <button id="darkModeToggle" style="position:fixed; top:10px; right:10px; padding:8px 12px; border:none; border-radius:6px; cursor:pointer; z-index:10000;">
-    🌙
-  </button>
+  <button id="darkModeToggle" class="dark-toggle">🌙</button>
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
@@ -48,6 +46,7 @@
         <img src="Profile.jpg" alt="Profile Picture" />
       </div>
       <div class="header-text">
+        <h1>Rohan D R</h1>
         <p>Bengaluru, India</p>
         <div class="top-buttons">
           <a href="mailto:official.rohandr@proton.me" class="btn"><i class="fas fa-envelope"></i> Email</a>
@@ -183,22 +182,11 @@
   <!-- Footer -->
   <footer>
     <span class="pgp">PGP Fingerprint: E94C 62A8 AE1E 1C51 4FAF 18AA E5EB B514 7938 DDB4</span>
-    <span class="copyright">© 2025 Rohan D 
-      R. All Rights Reserved.</span>
+    <span class="copyright">© 2025 Rohan D R. All Rights Reserved.</span>
   </footer>
 
-  <!-- JS: Dark Mode, Hamburger & Success Message -->
+  <!-- JS -->
   <script>
-    // Contact Form Success
-    const form = document.querySelector('.contact-form');
-    const successMessage = document.getElementById('successMessage');
-    form.addEventListener('submit', (e) => {
-      successMessage.style.display = 'block';
-      setTimeout(() => {
-        successMessage.style.display = 'none';
-      }, 5000);
-    });
-
     // Dark Mode
     const toggleBtn = document.getElementById('darkModeToggle');
     const currentTheme = localStorage.getItem('theme');
@@ -223,11 +211,16 @@
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => {
-      if(navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-      } else {
-        navLinks.style.display = 'flex';
-      }
+      if(navLinks.style.display === 'flex') navLinks.style.display = 'none';
+      else navLinks.style.display = 'flex';
+    });
+
+    // Contact Form Success
+    const form = document.querySelector('.contact-form');
+    const successMessage = document.getElementById('successMessage');
+    form.addEventListener('submit', (e) => {
+      successMessage.style.display = 'block';
+      setTimeout(() => successMessage.style.display = 'none', 5000);
     });
   </script>
 </body>
