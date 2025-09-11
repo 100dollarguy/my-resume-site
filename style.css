@@ -356,3 +356,15 @@ body.dark-mode .btn:hover { background-color: #10ac84; }
 
 /* Smooth scrolling */
 html { scroll-behavior: smooth; }
+
+footer .pgp-link {
+  color: #007bff; /* match your portfolio color */
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold; /* makes link bold */
+}
+
+footer .pgp-link:hover {
+  color: #0056b3; /* optional hover effect */
+}
+
