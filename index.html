@@ -18,6 +18,65 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Collapsible Project Details */
+    .project-details {
+      display: none;
+      margin-top: 10px;
+      padding: 12px;
+      border-left: 4px solid #007BFF;
+      background: #f1f1f1;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .toggle-btn {
+      margin-top: 8px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .toggle-btn:hover {
+      background-color: #0056b3;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 3px 7px;
+      margin: 2px 2px 5px 0;
+      font-size: 0.75rem;
+      border-radius: 3px;
+    }
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .project.featured {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      transition: box-shadow 0.3s ease;
+    }
+    .project.featured:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .projects-grid {
+        flex-direction: column;
+      }
+      .toggle-btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -57,38 +116,37 @@
       </div>
     </header>
 
-   <!-- About Me Section -->
-<section id="about" class="card">
-  <h2>About Me</h2>
-  <p>
-    Hello! I’m <strong>Rohan D R</strong>, a final-year MCA student at <strong>Amity Online University</strong> with a strong interest in <strong>DevOps, cloud infrastructure, and automation</strong>.
-  </p>
-  <p>
-    I enjoy creating <strong>production-ready systems</strong> that combine <strong>networking, security, and DevOps practices</strong> to solve real-world challenges, even through personal and academic projects.
-  </p>
-  <p>
-    My hands-on projects include:
-  </p>
-  <ul>
-    <li>Setting up and managing private servers and cloud environments</li>
-    <li>Automating workflows, deployment pipelines, and monitoring systems</li>
-    <li>Exploring secure networking and infrastructure solutions</li>
-  </ul>
-  <p>
-    I thrive in <strong>learning-focused and collaborative environments</strong> and am always looking for ways to make systems more <strong>efficient, reliable, and scalable</strong>.
-  </p>
-  <p>
-    Outside of my studies and projects, I enjoy experimenting with <strong>self-hosted networks</strong>, exploring new technologies, and continuously improving my skills in DevOps and automation.
-  </p>
-  <a href="#projects" class="btn">💻 View My Projects</a>
-</section>
-
+    <!-- About Me Section -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m <strong>Rohan D R</strong>, a final-year MCA student at <strong>Amity Online University</strong> with a strong interest in <strong>DevOps, cloud infrastructure, and automation</strong>.
+      </p>
+      <p>
+        I enjoy creating <strong>production-ready systems</strong> that combine <strong>networking, security, and DevOps practices</strong> to solve real-world challenges, even through personal and academic projects.
+      </p>
+      <p>
+        My hands-on projects include:
+      </p>
+      <ul>
+        <li>Setting up and managing private servers and cloud environments</li>
+        <li>Automating workflows, deployment pipelines, and monitoring systems</li>
+        <li>Exploring secure networking and infrastructure solutions</li>
+      </ul>
+      <p>
+        I thrive in <strong>learning-focused and collaborative environments</strong> and am always looking for ways to make systems more <strong>efficient, reliable, and scalable</strong>.
+      </p>
+      <p>
+        Outside of my studies and projects, I enjoy experimenting with <strong>self-hosted networks</strong>, exploring new technologies, and continuously improving my skills in DevOps and automation.
+      </p>
+      <a href="#projects" class="btn">💻 View My Projects</a>
+    </section>
 
     <!-- Career Objective -->
     <section id="career" class="card">
       <h2>Career Objective</h2>
       <p>
-        BCA graduate and final-year MCA student with hands-on experience in Docker, CI/CD pipelines, Linux administration, networking, and cloud infrastructure. Seeking remote opportunities in backend, DevOps, or cloud-focused roles to contribute to production-ready deployments, automation, and secure network solutions.
+        Final-year MCA student passionate about DevOps, cloud infrastructure, automation, and secure networking. I have created and hosted production-ready systems—including private media servers, cloud storage platforms, network segmentation labs, and VPN-enabled setups—for personal learning and experimentation. These projects have given me practical experience with Docker, CI/CD pipelines, Linux administration, networking, monitoring tools like Prometheus and Grafana, and basic blockchain development. I am eager to apply this hands-on experience in backend, DevOps, or cloud-focused roles, delivering scalable, secure, and efficient solutions while continuously growing my technical expertise.
       </p>
     </section>
 
@@ -143,38 +201,121 @@
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <section id="projects" class="card">
       <h2>Projects</h2>
       <div class="projects-grid">
+        <!-- Project 1 -->
         <div class="project featured">
-          <strong>Self-Hosted Media Server (Jellyfin + Tailscale):</strong>
-          <p>Production-ready private media streaming server accessible remotely via encrypted VPN.</p>
-          <a href="https://github.com/100dollarguy/private-media-server-macos" target="_blank" class="btn">🔗 View Code</a>
+          <strong>Self-Hosted Media Server (Jellyfin + Tailscale)</strong>
+          <button class="toggle-btn">Show Details</button>
+          <div class="project-details">
+            <p><strong>Problem:</strong> Stream private media remotely without exposing the server to the internet.</p>
+            <p><strong>Approach:</strong> Used Jellyfin media server inside Docker with Tailscale VPN for encrypted remote access.</p>
+            <p><strong>Challenges:</strong> Ensuring stable VPN connections and container orchestration.</p>
+            <p><strong>Outcome:</strong> Fully functional private media server accessible securely from anywhere.</p>
+            <p><strong>Learned:</strong> Docker networking, VPN integration, media server configuration.</p>
+            <p>
+              <span class="badge">Docker</span>
+              <span class="badge">Linux</span>
+              <span class="badge">VPN</span>
+            </p>
+            <a href="https://github.com/100dollarguy/private-media-server-macos" target="_blank" class="btn">🔗 View Code</a>
+          </div>
         </div>
+
+        <!-- Project 2 -->
         <div class="project featured">
-          <strong>Private DNS Ad-Blocking & Remote Access:</strong>
-          <p>Dockerized Pi-hole + Unbound DNS server with secure Tailscale VPN for network-wide ad-blocking and secure remote access.</p>
-          <a href="https://github.com/100dollarguy/pihole-unbound-tailscale-dockerized" target="_blank" class="btn">🔗 View Code</a>
+          <strong>Private DNS Ad-Blocking & Remote Access</strong>
+          <button class="toggle-btn">Show Details</button>
+          <div class="project-details">
+            <p><strong>Problem:</strong> Reduce unwanted network ads across all devices.</p>
+            <p><strong>Approach:</strong> Dockerized Pi-hole + Unbound DNS, secured via Tailscale VPN.</p>
+            <p><strong>Challenges:</strong> Container conflicts and DNS resolution issues.</p>
+            <p><strong>Outcome:</strong> Network-wide ad-blocking and secure remote access.</p>
+            <p><strong>Learned:</strong> Networking, Docker networking, VPN setup, DNS configuration.</p>
+            <p>
+              <span class="badge">Docker</span>
+              <span class="badge">Linux</span>
+              <span class="badge">Networking</span>
+            </p>
+            <a href="https://github.com/100dollarguy/pihole-unbound-tailscale-dockerized" target="_blank" class="btn">🔗 View Code</a>
+          </div>
         </div>
+
+        <!-- Project 3 -->
         <div class="project featured">
-          <strong>Nextcloud Cloud Storage & Monitoring:</strong>
-          <p>Nextcloud deployment with MariaDB + Redis, secured via Caddy, monitored using Prometheus & Grafana for full-stack cloud solution.</p>
-          <a href="https://github.com/100dollarguy/tailscale-nextcloud-docker" target="_blank" class="btn">🔗 View Code</a>
+          <strong>Nextcloud Cloud Storage & Monitoring</strong>
+          <button class="toggle-btn">Show Details</button>
+          <div class="project-details">
+            <p><strong>Problem:</strong> Need secure private cloud storage with monitoring.</p>
+            <p><strong>Approach:</strong> Nextcloud with MariaDB + Redis, secured with Caddy, monitored using Prometheus & Grafana.</p>
+            <p><strong>Challenges:</strong> Database performance tuning and monitoring integration.</p>
+            <p><strong>Outcome:</strong> Production-ready full-stack cloud solution with visibility into performance.</p>
+            <p><strong>Learned:</strong> Nextcloud deployment, monitoring stack, database optimization.</p>
+            <p>
+              <span class="badge">Docker</span>
+              <span class="badge">Nextcloud</span>
+              <span class="badge">Monitoring</span>
+            </p>
+            <a href="https://github.com/100dollarguy/tailscale-nextcloud-docker" target="_blank" class="btn">🔗 View Code</a>
+          </div>
         </div>
+
+        <!-- Project 4 -->
         <div class="project featured">
-          <strong>Home Network Design with CGNAT Avoidance:</strong>
-          <p>Multi-subnet Wi-Fi network overcoming ISP CGNAT limits using TP-Link devices; demonstrates advanced networking and remote accessibility.</p>
-          <a href="https://github.com/100dollarguy/home-network-design-with-cgnat-avoidance" target="_blank" class="btn">🔗 View Code</a>
+          <strong>Home Network Design with CGNAT Avoidance</strong>
+          <button class="toggle-btn">Show Details</button>
+          <div class="project-details">
+            <p><strong>Problem:</strong> ISP CGNAT preventing direct remote access to devices.</p>
+            <p><strong>Approach:</strong> Multi-subnet Wi-Fi network design with TP-Link routers and Tailscale VPN.</p>
+            <p><strong>Challenges:</strong> Proper subnet routing and CGNAT workarounds.</p>
+            <p><strong>Outcome:</strong> Remote accessibility without ISP restrictions.</p>
+            <p><strong>Learned:</strong> Network design, CGNAT workarounds, subnetting, VPN integration.</p>
+            <p>
+              <span class="badge">Networking</span>
+              <span class="badge">VPN</span>
+              <span class="badge">Linux</span>
+            </p>
+            <a href="https://github.com/100dollarguy/home-network-design-with-cgnat-avoidance" target="_blank" class="btn">🔗 View Code</a>
+          </div>
         </div>
+
+        <!-- Project 5 -->
         <div class="project featured">
-          <strong>Network Segmentation Lab:</strong>
-          <p>Enterprise network zones using Linux namespaces, bridges & iptables firewall policies for network security and segmentation learning.</p>
-          <a href="https://github.com/100dollarguy/vps-network-segmentation-demo" target="_blank" class="btn">🔗 View Code</a>
+          <strong>Network Segmentation Lab</strong>
+          <button class="toggle-btn">Show Details</button>
+          <div class="project-details">
+            <p><strong>Problem:</strong> Learn enterprise network segmentation.</p>
+            <p><strong>Approach:</strong> Linux namespaces, bridges, and iptables firewall policies.</p>
+            <p><strong>Challenges:</strong> Configuring isolated zones without network conflicts.</p>
+            <p><strong>Outcome:</strong> Fully segmented lab network for testing security setups.</p>
+            <p><strong>Learned:</strong> Firewall policies, network isolation, Linux networking.</p>
+            <p>
+              <span class="badge">Linux</span>
+              <span class="badge">Networking</span>
+              <span class="badge">Security</span>
+            </p>
+            <a href="https://github.com/100dollarguy/vps-network-segmentation-demo" target="_blank" class="btn">🔗 View Code</a>
+          </div>
         </div>
+
+        <!-- Project 6 -->
         <div class="project featured">
-          <strong>Early Blockchain Project:</strong>
-          <p>Solidity smart contracts for basic social media & time-locked contracts using Hardhat; showcases blockchain fundamentals and contract deployment.</p>
+          <strong>Early Blockchain Project</strong>
+          <button class="toggle-btn">Show Details</button>
+          <div class="project-details">
+            <p><strong>Problem:</strong> Learn basic blockchain development and smart contracts.</p>
+            <p><strong>Approach:</strong> Solidity contracts for social media features and time-locked contracts using Hardhat.</p>
+            <p><strong>Challenges:</strong> Smart contract logic and deployment on local testnet.</p>
+            <p><strong>Outcome:</strong> Understanding of Solidity, Hardhat, and contract deployment workflows.</p>
+            <p><strong>Learned:</strong> Blockchain fundamentals, smart contract structure, testing.</p>
+            <p>
+              <span class="badge">Solidity</span>
+              <span class="badge">Blockchain</span>
+              <span class="badge">Hardhat</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -254,6 +395,16 @@
     form.addEventListener('submit', (e) => {
       successMessage.style.display = 'block';
       setTimeout(() => successMessage.style.display = 'none', 5000);
+    });
+
+    // Collapsible Project Details
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const details = btn.nextElementSibling;
+        details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        btn.textContent = details.style.display === 'block' ? 'Hide Details' : 'Show Details';
+      });
     });
   </script>
 </body>
